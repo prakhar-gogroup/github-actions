@@ -6,6 +6,6 @@ describe(`Testing root '/'`, () => {
   it("should return a response", async () => {
     const response = await request.get("/");
     expect(response.status).toBe(200);
-    expect(response.text).toBe("Hello there!");
+    expect(response.text).toBe("Hello there");
   });
 });
