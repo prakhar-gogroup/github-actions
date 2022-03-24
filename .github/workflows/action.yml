@@ -24,7 +24,7 @@ jobs:
           SLACK_ICON: https://avatars.slack-edge.com/2022-03-24/3272769494295_ab7457048ae0deeb52d5_48.png
           SLACK_MESSAGE: "Starting deployment Github-Actions-Group9 :hourglass_flowing_sand: commit: ${{ github.event.head_commit.message }}"
           SLACK_TITLE: Message
-          SLACK_USERNAME: Deployment Bot
+          SLACK_USERNAME: Github Bot
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_DEPLOYMENTS }}
       # ******************** X ************************* X ******************
 
@@ -42,21 +42,21 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         if: ${{ failure() }}
         env:
-          SLACK_CHANNEL: production-deployments
+          SLACK_CHANNEL: group9
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
           SLACK_ICON: https://avatars.slack-edge.com/2022-03-24/3272769494295_ab7457048ae0deeb52d5_48.png
           SLACK_MESSAGE: "Failed deployment :x: Github-Actions-Group9: ${{ github.event.head_commit.message }}"
           SLACK_TITLE: Message
-          SLACK_USERNAME: Deployment Bot
+          SLACK_USERNAME: Github Bot
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_DEPLOYMENTS }}
       - name: Slack Notification on success
         uses: rtCamp/action-slack-notify@v2
         if: ${{ success() }}
         env:
-          SLACK_CHANNEL: production-deployments
+          SLACK_CHANNEL: group9
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
           SLACK_ICON: https://avatars.slack-edge.com/2022-03-24/3272769494295_ab7457048ae0deeb52d5_48.png
           SLACK_MESSAGE: "Success Github-Actions-Group9 :rocket: commit: ${{ github.event.head_commit.message }}"
           SLACK_TITLE: Message
-          SLACK_USERNAME: Deployment Bot
+          SLACK_USERNAME: Github Bot
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_DEPLOYMENTS }}
