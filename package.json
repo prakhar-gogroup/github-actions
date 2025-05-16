@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node src",
     "dev": "NODE_ENV=development node src",
-    "test": "jest src/app.test.js"
+    "test": "jest src/*.test.js"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.5",
