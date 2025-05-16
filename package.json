@@ -9,10 +9,14 @@
   "private": false,
   "scripts": {
     "start": "node src",
+    "dev": "NODE_ENV=development node src",
     "test": "jest src/app.test.js"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
     "jest": "^29.7.0",
     "supertest": "^7.1.1"
   },
